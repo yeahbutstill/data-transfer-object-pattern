@@ -45,7 +45,7 @@ src
 │   └── resources
 └── test
     └── java
-    │  └── id.co.cimbniaga.octomobile.project
+    │  └── com.yeahbutstill.project
     │      ├── component                                               # Package containing unit test class for component class
     │      ├── controller                                              # Package containing integration test & unit test for controller class
     │      ├── domain                                                  # Package containing dto & pojo class for testing purpose
