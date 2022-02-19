@@ -1,6 +1,9 @@
 package com.yeahbutstill.datatransferobjectpattern.domain.dao;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.Hibernate;
 
 import javax.persistence.Entity;
@@ -16,29 +19,33 @@ import java.util.Objects;
 @Setter
 @ToString
 @RequiredArgsConstructor
-public class LocationDao {
+public class LocationDAO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull @NotEmpty
+    @NotNull
+    @NotEmpty
     private double lat;
 
-    @NotNull @NotEmpty
+    @NotNull
+    @NotEmpty
     private double lng;
 
-    @NotNull @NotEmpty
+    @NotNull
+    @NotEmpty
     private String place;
 
-    @NotNull @NotEmpty
+    @NotNull
+    @NotEmpty
     private String description;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        LocationDao that = (LocationDao) o;
+        LocationDAO that = (LocationDAO) o;
         return id != null && Objects.equals(id, that.id);
     }
 
