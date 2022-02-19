@@ -113,6 +113,17 @@ mvn sonar:sonar --settings=settings.xml -Dmaven.wagon.http.ssl.insecure=true -Dm
 - Make sure the jar is already compiled & installed (by runing command mvn install) in local project folder
 - Sonar will look up to the jar, test reports & compiled class in the build target folder
 
+## Insert Data to Database
+
+```sql
+INSERT INTO LOCATION_DAO (id, lat, lng, place, description)
+values (1, -6.4440249, 106.744265215, 'Citayam', 'Banyak lubang dan berdebu.');
+INSERT INTO USER_DAO(id, email, firstname, lastname, password, username, location_id)
+values (1, 'romeo@gmail.com', 'Romeo', 'Lah', 'gjt6lf2nt5os', 'montagues', 1);
+INSERT INTO USER_DAO(id, email, firstname, lastname, password, username, location_id)
+values (2, 'juliet@gmail.com', 'Juliet', 'Loh', 's894mjg03hd0', 'capulets', 1);
+```
+
 ## References
 
 - [Versioning in REST API](https://javahotfix.blogspot.com/2019/03/versioning-in-rest-api.html)
